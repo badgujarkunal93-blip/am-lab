@@ -9,9 +9,6 @@ num_samples = int(input("Enter number of samples: "))
 population_size = int(input("Enter population size (suggested 100000): "))
 if min(sample_size, num_samples, population_size) <= 0:
     raise ValueError("All sizes must be positive.")
-if sample_size > population_size:
-    raise ValueError("Sample size cannot exceed population size when sampling without replacement.")
-
 population = np.random.uniform(0, 1, population_size)
 sample_means = []
 for _ in range(num_samples):
